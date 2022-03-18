@@ -19,7 +19,7 @@ body {
   background-size: cover;
   color: white;
 }
-main { padding: 1% 0; }
+/* main { padding: 1% 0; } */
 .scoreline {
   display: grid;
   grid-template-columns: auto auto auto;
