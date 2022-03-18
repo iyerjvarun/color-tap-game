@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
 /* font-family: 'Cabin Sketch', cursive; */
 
-html {
-  box-sizing: border-box;
-  /* overflow-y: hidden; */
-  
-}
+html { box-sizing: border-box; }
 *,
 *:before,
 *:after {
@@ -19,7 +15,6 @@ body {
   margin: 0 25%;
   font-family: 'Cabin Sketch', cursive;
   font-size: 18px;
-  /* line-height: 1.5; */
   background-image: url("bg.jpg");
   background-size: cover;
   color: white;
@@ -64,13 +59,6 @@ button {
 #blue{ background-color: #004FC6; }  
 #red{ background-color: #E22626; }
 #green{ background-color: #00C800; }
-
-#highscores {
-  display: none;
-  position: absolute;
-  top:200;
-}
-
 
 @media(max-width: 560px) {
 
