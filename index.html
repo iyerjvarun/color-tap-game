@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Game" />
+  <title>Game</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <!-- <meta http-equiv="Cache-Control" content="no-store" /> -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main>
+    <h1 id="gametitle">COLOR TAP</h1>
+    <h2 id="tagline"> Test your reflexes.</h2>
+
+    <!-- <div id="start">
+
+    </div> -->
+
+    <div id="player">
+      <h2 id="levelrule"> Level 1: Tap on the font color as many times as you can, before time runs out!.</h2>
+      <h1 id="name"></h1>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; width: fit-content; margin: auto">
+        <button class="button" id="red" onclick="func(this.id)">Red</button>
+        <button class="button" id="yellow" onclick="func(this.id)">Yellow</button>
+        <button class="button" id="blue" onclick="func(this.id)">Blue</button>
+        <button class="button" id="green" onclick="func(this.id)">Green</button>
+      </div>
+      <div class="scoreline">
+        <h1>Score:</h1>
+        <h1 id="score" name="score">0</h1>
+        <h2 id="mark"></h2>
+      </div>
+      <h2 id="selector"></h2>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

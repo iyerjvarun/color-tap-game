@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
+/* font-family: 'Cabin Sketch', cursive; */
+
+html {
+  box-sizing: border-box;
+  /* overflow-y: hidden; */
+  
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*Global styles
+---------------- */
+body {
+  text-align: center;
+  margin: 0 25%;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 18px;
+  /* line-height: 1.5; */
+  background-image: url("bg.jpg");
+  background-size: cover;
+  color: white;
+}
+main { padding: 1% 0; }
+.scoreline {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: fit-content;
+  margin: 20px auto;
+}
+.scoreline h1, .scoreline h2 {
+  margin: auto;
+  padding: 0 5px;
+}
+
+#gametitle{
+  font-weight: 700;
+  font-size: 80px;
+  margin-bottom: -20px;
+}
+#name{
+  margin: 30px auto;
+  width: fit-content;
+  padding: 10px;
+  border-color: white;
+  background-color: white;
+}
+
+button {
+  margin: 5px;
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 170%;
+  color: white;
+  border-color: white;
+}
+
+#yellow{ background-color: #ECC600;  }
+#blue{ background-color: #004FC6; }  
+#red{ background-color: #E22626; }
+#green{ background-color: #00C800; }
+
+#highscores {
+  display: none;
+  position: absolute;
+  top:200;
+}
+
+
+@media(max-width: 560px) {
+
+  body { margin: 0 5%; line-height: 1; }
+  main {padding: 1 0;}
+  button { min-width: 120; max-width: 150; height: 80px;}
+  #gametitle { font-size: 60px;}
+  .scoreline {margin-bottom: 10px;}
+
+}
