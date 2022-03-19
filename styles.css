@@ -15,11 +15,12 @@ body {
   margin: 0 25%;
   font-family: 'Cabin Sketch', cursive;
   font-size: 18px;
+  background-size: auto;
+  background-position: center center;
   background-image: url("bg.jpg");
-  background-size: cover;
   color: white;
 }
-/* main { padding: 1% 0; } */
+main { padding: 1% 0; }
 .scoreline {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -60,7 +61,7 @@ button {
 #red{ background-color: #E22626; }
 #green{ background-color: #00C800; }
 
-@media(max-width: 560px) {
+@media(max-width: 685px) {
 
   body { margin: 0 5%; line-height: 1; }
   main {padding: 1 0;}
