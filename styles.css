@@ -31,6 +31,12 @@ main { padding: 1% 0; }
   margin: auto;
   padding: 0 5px;
 }
+.ruleline{
+  text-align: justify;
+}
+.player{
+  visibility: hidden;
+}
 
 #gametitle{
   font-weight: 700;
@@ -44,7 +50,9 @@ main { padding: 1% 0; }
   border-color: white;
   background-color: white;
 }
-
+#rule-img{
+  width: 60%;
+}
 button {
   margin: 5px;
   width: 300px;
@@ -63,10 +71,17 @@ button {
 
 @media(max-width: 685px) {
 
-  body { margin: 0 5%; line-height: 1; }
+  body { margin: 0 7%; line-height: 1; }
   main {padding: 1 0;}
   button { min-width: 120px; max-width: 150px; height: 80px;}
   #gametitle { font-size: 60px;}
   .scoreline {margin-bottom: 10px;}
+  /* #levelrule{ font-size: 95%;} */
+  #letsgo{
+  min-width: 200px;
+  max-width: 250px;}
+  #rule-img{
+    width: 80%;
+  }
 
 }

@@ -3,7 +3,8 @@ colors=["blue","green","red","yellow"];
 const selector =["word","background","font"];
 
 var nameOf,colorOf,bgOf, counter=0, marks=1,selectOf,comparer;
-var timeoutseconds=Math.floor(Math.random() * (5000 - 2000) + 2000);
+var timeoutseconds=Math.floor(Math.random() * (4000 - 2000) + 2000);
+// timeoutseconds=200;
 
 nameOf=colors[Math.floor(Math.random() * 4)];
 document.getElementById("name").innerHTML = nameOf;
@@ -53,30 +54,45 @@ function func(currColor){
   }
 }
 
-
+function startgame(){
+  document.getElementById("start").style.display="none";
+  document.getElementById("rules").style.display="none";
+    document.getElementById("player").style.display="block";
+}
+var nameOfdup,colorOfdup,bgOfdup,selectOfdup;
 setInterval(function() {
 //Level 1
   nameOf=colors[Math.floor(Math.random() * 4)];
+  while(nameOf==nameOfdup){
+    nameOf=colors[Math.floor(Math.random() * 4)];
+  }
+  nameOfdup=nameOf;
   document.getElementById("name").innerHTML = nameOf;
   marks=1;
   
   timeoutseconds=Math.floor(Math.random() * (4000 - 2000) + 2000);
-  while(colorOf==nameOf){
+  while(colorOf==nameOf || colorOf==colorOfdup){
       colorOf = colors[Math.floor(Math.random() * 4)];
   }
+  colorOfdup=colorOf;
   document.getElementById("name").style.color = colorval[colorOf];
 //Level 2
   if (counter>=50)
   {
-    while(bgOf==colorOf){
+    while(bgOf==colorOf || bgOf==bgOfdup){
     bgOf = colors[Math.floor(Math.random() * 4)];
   }
+  bgOfdup=bgOf;
     document.getElementById("name").style.backgroundColor = colorval[bgOf];
     document.getElementById("levelrule").innerHTML="Level 2: Tap on the font color! More taps mean more points. But hurry before the color changes";
   }
 // Level 3
   if(counter>=100){
       selectOf=selector[Math.floor(Math.random() * 3)];
+      while(selectOf==selectOfdup){
+        selectOf=selector[Math.floor(Math.random() * 3)];
+    }
+    selectOfdup=selectOf;
       document.getElementById("levelrule").innerHTML="Level 3: Tap on the "+selectOf+" color";
 
   }

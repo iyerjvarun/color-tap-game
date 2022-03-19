@@ -14,11 +14,7 @@
     <main>
       <h1 id="gametitle">COLOR TAP</h1>
       <h2 id="tagline">Test your reflexes.</h2>
-
-      <!-- <div id="start">
-    </div> -->
-
-      <div id="player">
+      <div id="player" style="display: none">
         <h2 id="levelrule">
           Level 1: Tap on the font color! More taps = More points. But Hurry
           before the color changes!
@@ -47,6 +43,34 @@
           <h2 id="mark"></h2>
         </div>
         <h2 id="selector"></h2>
+      </div>
+      <div id="start">
+        <button
+          class="button"
+          id="letsgo"
+          onclick="startgame()"
+          style="background-color: black"
+        >
+          Ready? Let's go!
+        </button>
+      </div>
+      <div id="rules">
+        <p class="ruleline">
+          Welcome to Color Tap! Before we get to the levels, let us understand
+          the terminology of the game:
+        </p>
+        <img src="rules.png" alt="rules" id="rule-img" />
+        <p class="ruleline">
+          Level 1: Choose the font color of the word being displayed.
+        </p>
+        <p class="ruleline">
+          Level 2: Starts at <strong>50 points!</strong> Continue choosing the
+          font color of the word being displayed.
+        </p>
+        <p class="ruleline">
+          Level 3: Starts at <strong>100 points!</strong> Pay attention to the
+          instruction above and choose the color wisely.
+        </p>
       </div>
     </main>
     <div id="sfcbhbxx7sjw653mx947ym1j6nc387b7t98"></div>
