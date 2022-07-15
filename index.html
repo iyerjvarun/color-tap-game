@@ -8,18 +8,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <!-- <meta http-equiv="Cache-Control" content="no-store" /> -->
     <link rel="stylesheet" href="styles.css" />
+
+    <script
+      type="text/javascript"
+      src="https://counter9.stat.ovh/private/counter.js?c=bhbxx7sjw653mx947ym1j6nc387b7t98&down=async"
+      async
+    ></script>
   </head>
 
   <body>
     <main>
+      <!-- GAME TITLE -->
       <h1 id="gametitle">COLOR TAP</h1>
       <h2 id="tagline">Test your reflexes.</h2>
+      <!-- END OF GAME TITLE -->
+
+      <!-- GAME  INTERFACE-->
       <div id="player" style="display: none">
+        <!-- level rule changes based on level -->
         <h2 id="levelrule">
           Level 1: Tap on the font color! More taps = More points. But Hurry
           before the color changes!
         </h2>
-        <h1 id="name"></h1>
+
+        <!-- this is the color displayer which switches colors for the game -->
+        <h1 id="colorname"></h1>
+
+        <!-- the button pad with 4 color buttons -->
         <div
           style="
             display: grid;
@@ -37,14 +52,24 @@
             Green
           </button>
         </div>
+
+        <!-- scoreline displays your current total score when you're playing the game. mark shows you the last increment of your score-->
         <div class="scoreline">
           <h1>Score:</h1>
           <h1 id="score" name="score">0</h1>
           <h2 id="mark"></h2>
         </div>
-        <h2 id="selector"></h2>
       </div>
+      <!-- END OFGAME  INTERFACE-->
+
+      <!-- WELCOME SCREEN INTERFACE -->
+
+      <!-- textbox and start button -->
       <div id="start">
+        <!-- playername takes username -->
+        <input type="text" id="playername" placeholder="Your Name" autofocus />
+
+        <!-- start button to begin the game -->
         <button
           class="button"
           id="letsgo"
@@ -54,6 +79,9 @@
           Ready? Let's go!
         </button>
       </div>
+      <!-- END OF textbox and start button -->
+
+      <!-- rules shown below the start button -->
       <div id="rules">
         <p class="ruleline">
           Welcome to Color Tap! Before we get to the levels, let us understand
@@ -72,13 +100,42 @@
           instruction above and choose the color wisely.
         </p>
       </div>
+      <!-- end of rules section -->
+
+      <!-- FINAL SCORE SECTION -->
+      <div id="finalscores">
+        <!-- showcases player name -->
+        <h2 id="currname"></h2>
+        <!-- shows score of curr player at end of game -->
+        <h2 id="currscore"></h2>
+        <hr />
+        <h2>High Scores at Color Tap</h2>
+
+        <!-- TABLE FOR HIGH SCORE DISPLAY, EVERYTHING IS FETCHED FROM FIREBASE AND POPULATED HERE -->
+        <table id="playerdetails">
+          <tr style="background-color: grey; color: black">
+            <th>NAME</th>
+            <th>SCORE</th>
+          </tr>
+        </table>
+
+        <!-- restart button after high scores are shown -->
+        <button id="restartgame" onclick="location.reload()">
+          Play Again!
+        </button>
+      </div>
     </main>
-    <div id="sfcbhbxx7sjw653mx947ym1j6nc387b7t98"></div>
     <script
-      type="text/javascript"
-      src="https://counter9.stat.ovh/private/counter.js?c=bhbxx7sjw653mx947ym1j6nc387b7t98&down=async"
-      async
+      src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js"
+      type="module"
     ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js"
+      type="module"
+    ></script>
+    <script type="module" src="firebase.js"></script>
+    <script src="script.js" type="module"></script>
+
     <noscript
       ><a href="https://www.freecounterstat.com" title="website counter"
         ><img
@@ -87,6 +144,5 @@
           title="website counter"
           alt="website counter" /></a
     ></noscript>
-    <script src="script.js"></script>
   </body>
 </html>

@@ -43,7 +43,7 @@ main { padding: 1% 0; }
   font-size: 80px;
   margin-bottom: -20px;
 }
-#name{
+#colorname{
   margin: 30px auto;
   width: fit-content;
   padding: 10px;
@@ -62,7 +62,45 @@ button {
   font-size: 170%;
   color: white;
   border-color: white;
+  background-color: black;
 }
+
+#finalscores{
+  visibility: collapse;
+}
+
+#playername{
+  margin: 5px;
+  width: 300px;
+  height: 75px;
+  border-radius: 5px;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 170%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(0, 0, 0);
+  color: black;
+
+}
+
+#playerdetails{
+  margin: 5px;
+  height: 100px;
+  border-radius: 5px;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 170%;
+  color: white;
+  background-color: black;
+  border-color: white;
+}
+
+td, th{
+  border: 1px solid white;
+  width: 500px;
+  text-align: center;
+}
+
+
 
 #yellow{ background-color: #ECC600;  }
 #blue{ background-color: #004FC6; }  
@@ -73,7 +111,7 @@ button {
 
   body { margin: 0 7%; line-height: 1; }
   main {padding: 1 0;}
-  button { min-width: 120px; max-width: 150px; height: 80px;}
+  button, input { min-width: 120px; max-width: 150px; height: 80px;}
   #gametitle { font-size: 60px;}
   .scoreline {margin-bottom: 10px;}
   /* #levelrule{ font-size: 95%;} */
